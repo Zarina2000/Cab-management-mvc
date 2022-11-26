@@ -1,4 +1,4 @@
-const user = require('../model/registration');
+const user = require('../models/registration');
 
 module.exports = async (req, res, next) => {
     req.identity = {
@@ -23,8 +23,7 @@ module.exports = async (req, res, next) => {
     req.identity.isAuthenticated = true;
     req.identity.user = {
         id: userFromDb.dataValues.id,
-        firstName: userFromDb.dataValues.firstName,
-        lastName: userFromDb.dataValues.lastName,
+        fullName: userFromDb.dataValues.full_name,
         email: userFromDb.dataValues.email,
         role: 'user'
     }
