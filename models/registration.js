@@ -33,7 +33,12 @@ const registration = db.sequelize.define('registration',{
         type:DataTypes.STRING(50),
         allowNull:false,
 
-    }
+    },
+    role:{
+        type:DataTypes.STRING(50),
+        allowNull:false,
+
+    },
 });
 
 

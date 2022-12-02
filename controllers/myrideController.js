@@ -4,11 +4,15 @@ const ride = require('../models/booking');
 //     res.render('myride');
 // }
 module.exports.getMyride = (req, res, next) => {
-    ride.findAll().then(ridedata => {
+    console.log("Hii");
+    ride.findAll({ where: { user_id:req.session.userId},}).then(ridedata => {
+        console.log(ridedata);
+       
         res.render('myride', {
             data: ridedata,
             //identity: req.identity.user
         });
+        
     })
 }
 

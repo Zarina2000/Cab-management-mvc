@@ -2,11 +2,11 @@ const db = require('../models/registration');
 const {body, validationResult} = require('express-validator');
 
 module.exports.index = (req, res, next) => {
-    db.findAll().then(datas => {
-        res.render('login', {
-            data: datas
-        });
-    })
+    // db.findAll().then(datas => {
+    //     res.render('index', {
+    //         data: datas
+    //     });
+    // })
 }
 module.exports.login = (req, res, next)=>{
     res.render('login');
@@ -27,7 +27,7 @@ module.exports.getIndex = (req, res, next)=>{
 }
 
 module.exports.loginPost = async (req, res, next)=>{
-    console.log("hi");
+   
     // const {username, password} = req.body;
     const username = req.body.username;
     const password = req.body.password;
@@ -38,11 +38,31 @@ module.exports.loginPost = async (req, res, next)=>{
     if(userFromDb == null){
         res.render('login', {message: 'No user with this email or password was found.'})
     }
+    req.session.userId = userFromDb.id;
 
-    res.render('index');
+    console.log('USER SESSION SET')
+
+    if (userFromDb.dataValues.role == "passenger") {
+
+        return res.redirect("/");
+
+    } else if (userFromDb.dataValues.role == "driver") {
+
+        return res.redirect("/");
+
+    } else {
+
+        return res.redirect("/admin/home");
+
+    }
+
+    res.redirect("/");
+
 }
+
 module.exports.getAll = (req, res, next) => {
     res.render('registration');
+   
 }
 
 module.exports.addOne = (req, res, next)=>{
@@ -51,10 +71,16 @@ db.create({
         email:req.body.email,
         username:req.body.username,
         password:req.body.password,
-        confirm_password:req.body.confirm_password
+        confirm_password:req.body.confirm_password,
+        role:req.body.role
 })
 .then((user)=>{
     res.redirect("/login");
    
 })
+}
+
+module.exports.logout=(req,res,next)=>{
+    req.session = null;
+    res.redirect("/login");
 }

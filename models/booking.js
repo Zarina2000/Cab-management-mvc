@@ -8,12 +8,6 @@ const booking = db.sequelize.define('booking',{
         autoIncrement:true,
       
     },
-    // user_id:{
-    //     type:DataTypes.INTEGER,
-    //     primaryKey:true,
-    //     autoIncrement:true,
-      
-    // },
     pickup_point:{
         type:DataTypes.STRING(50),
         allowNull:false,
@@ -35,6 +29,13 @@ const booking = db.sequelize.define('booking',{
         type:DataTypes.STRING(50),
         allowNull:false,
     },
+
+    user_id:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+        
+      
+    }
    
 });
 

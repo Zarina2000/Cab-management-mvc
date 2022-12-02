@@ -9,9 +9,9 @@ module.exports.book = (req, res, next) => {
     res.render('prebooking');
 }
 
-module.exports.getHome = (req, res, next) => {
-    res.render('index');
-}
+// module.exports.getHome = (req, res, next) => {
+//     res.render('index');
+// }
 
 
 module.exports.scheduleBooking = (req, res, next)=>{
@@ -20,10 +20,12 @@ user.create({
     destination:req.body.destination,
     date:req.body.date,
     time:req.body.time,
-    pasengerNumber:req.body.passenger_num
+    pasengerNumber:req.body.passenger_num,
+    user_id:req.identity.user.id
+    
 })
 .then((user)=>{
-    res.redirect("/index");
+    res.redirect("/myride");
    
 })
 }
