@@ -25,6 +25,9 @@ module.exports.getprebook = (req, res, next) => {
 module.exports.getIndex = (req, res, next)=>{
     res.render('index');
 }
+module.exports.adminHome = (req, res, next)=>{
+    res.render('adminHome');
+}
 
 module.exports.loginPost = async (req, res, next)=>{
    
@@ -52,7 +55,7 @@ module.exports.loginPost = async (req, res, next)=>{
 
     } else {
 
-        return res.redirect("/admin/home");
+        return res.redirect("/adminHome");
 
     }
 

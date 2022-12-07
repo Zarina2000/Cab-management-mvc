@@ -26,14 +26,16 @@
         margin-top: 30px;
         align-items: center;
         margin-right: 100px;
+        color: white;
     }
 </style>
 
-{{>navbar}}
+{{>adminNavbar}}
 
 <div class="container">
 
     <table id="example" class="table table-dark table-striped" style="width:100%">
+        
         <thead>
             <tr>
                 <th>Booking_Id</th>
@@ -47,20 +49,47 @@
         <tbody>
           {{#each data.data}}
         <tr>
-            <td>{{this.dataValues.booking_id}}</td>
-            <td>{{this.dataValues.pickup_point}}</td>
-            <td>{{this.dataValues.destination}}</td>
-            <td>{{this.dataValues.date}}</td>
-            <td>{{this.dataValues.time}}</td>
-            <td>{{this.dataValues.pasengerNumber}}</td>
-           
+            <td>{{this.booking_id}}</td>
+            <td>{{this.pickup_point}}</td>
+            <td>{{this.destination}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.pasengerNumber}}</td>
+
         </tr>
         {{/each}}
         </tbody>
     </table>
+
     {{!-- <p class="text-end">You are logged in as:
         <b>{{identity.fullName}}</b> --}}
 
+{{!-- <table>
+      
+        <thead>
+            <tr>
+                <th>Booking_Id</th>
+                <th>Pickup Point</th>
+                <th>Destination</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Passengers</th>
+            </tr>
+        </thead>
+        <tbody>
+          {{#each data.data}}
+        <tr>
+            <td>{{this.booking_id}}</td>
+            <td>{{this.pickup_point}}</td>
+            <td>{{this.destination}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.pasengerNumber}}</td>
+
+        </tr>
+        {{/each}}
+        </tbody>
+    </table> --}}
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

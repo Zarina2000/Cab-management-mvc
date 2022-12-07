@@ -1,6 +1,6 @@
 const Customer = require('./registration')
 const booking = require('./booking')
-
+const price = require('./price')
 
 
 Customer.hasOne(booking);
@@ -13,3 +13,4 @@ booking.belongsTo(Customer,{
 });
 Customer.sync({alter: true});
 booking.sync({alter: true});
+price.sync({alter: true});

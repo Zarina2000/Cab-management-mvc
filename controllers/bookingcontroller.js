@@ -1,4 +1,5 @@
 const user = require('../models/booking');
+const price = require('../models/price');
 const { body, validationResult } = require('express-validator');
 
 // module.exports.booking = (req, res, next)=>{
@@ -25,7 +26,41 @@ user.create({
     
 })
 .then((user)=>{
-    res.redirect("/myride");
+    const pickupPoint=req.body.pickup;
+
+    const destination=req.body.destination;
+
+    console.log(pickupPoint)
+
+    price.findOne({
+
+        where: {pickup_point:pickupPoint,destination:destination}
+
+    })
+
+    .then(amount=>{
+
+        console.log(amount.price)
+       
+            res.render("payment",{
+
+                price:amount.price,
+
+                location_id:amount.location_id,
+
+                pickup_point : amount.pickup_point,
+
+                destination:amount.destination
+
+            })
+
+           
+
+        })
+   // res.redirect("/payment");
    
-})
+});
+// .then(err=>{
+//     console.log(err);
+// })
 }

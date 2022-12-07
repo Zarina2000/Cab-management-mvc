@@ -47,7 +47,7 @@
     </style>
 
     
-
+{{>navbar}}
     <!-- First div -->
     <div class="form-wrap">
         <div class="row w-100">
@@ -57,7 +57,7 @@
                        <center> <h2 class="heading">Request a ride now</h2></center>
                         <input id="myInput" type="text" class="form-control m-3 col-3" placeholder="Enter pickup location">
                         <input id="myInput1" type="text" class="form-control m-3" placeholder="Enter destination">
-                       <button type="submit" class="btn" style="text-decoration:none;  margin-left:f20px;">Request Now</button>
+                       <button type="submit" class="btn" <a href="/payment" style="text-decoration:none;  margin-left:f20px;">Request Now</a></button>
                        <button type="submit" class="btn" ><a href="/prebooking" style="text-decoration:none; ">Schedule for later</a></button>
                        <span id="err-name" style="color: red;display:block;"></span>
                       </form>

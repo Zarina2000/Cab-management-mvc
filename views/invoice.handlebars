@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="/static/payment.css" />
+{{>navbar}}
+
+<div id="body" bgcolor="#f6f6f6" style="color: #333; height: 100%; width: 100%;" height="100%" width="100%">
+    <table bgcolor="#f6f6f6" cellspacing="0" style="border-collapse: collapse; padding: 40px; width: 100%;"
+        width="100%">
+        <tbody>
+            <tr>
+                <td width="3px" style="padding: 10;"></td>
+                <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                    <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0;">
+                                    <a href="#" style="color: #348eda;" target="_blank">
+
+                                    </a>
+                                </td>
+                                <td style="color: #999; font-size: 12px; padding: 0; text-align: right;" align="right">
+                                    Cab Service<br />
+                                    Invoice #3440952<br />
+                                    {{data.user.full_name}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="5px" style="padding: 0;"></td>
+            </tr>
+
+            <tr>
+                <td width="5px" style="padding: 0;"></td>
+                <td bgcolor="#FFFFFF"
+                    style="border: 1px solid #000; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                    <table width="100%"
+                        style="background: #f9f9f9; border-bottom: 1px solid #eee; border-collapse: collapse; color: #999;">
+                        <tbody>
+                            <tr>
+                                <td width="50%" style="padding: 20px;"><strong
+                                        style="color: #333; font-size: 24px;">{{data.price}}</strong> Paid</td>
+                                <td align="right" width="50%" style="padding: 20px;">Thanks for using <span
+                                        class="il">Cabservice.com</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="padding: 0;"></td>
+                <td width="5px" style="padding: 0;"></td>
+            </tr>
+            <tr>
+                <td width="5px" style="padding: 0;"></td>
+                <td
+                    style="border: 1px solid #000; border-top: 0; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                    <table cellspacing="0"
+                        style="border-collapse: collapse; border-left: 1px solid #000; margin: 0 auto; max-width: 600px;">
+                        <tbody>
+                            <tr>
+                                <td valign="top" style="padding: 20px;">
+                                    <h3 style="
+                                            border-bottom: 1px solid #000;
+                                            color: #000;
+                                            font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                                            font-size: 18px;
+                                            font-weight: bold;
+                                            line-height: 1.2;
+                                            margin: 0;
+                                            margin-bottom: 15px;
+                                            padding-bottom: 5px;
+                                        ">
+                                        Summary
+                                    </h3>
+                                    <table cellspacing="0" style="border-collapse: collapse; margin-bottom: 40px;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 2px 0;">Pickup Point</td>
+                                                <td align="right" style="padding: 5px 0;">{{data.pickup_point}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 2px 0;">Destination</td>
+                                                <td align="right" style="padding: 5px 0;">{{data.destination}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 2px 0;">Amount</td>
+                                                <td align="right" style="padding: 5px 0;">{{data.price}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    style="border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;">
+                                                    Amount paid</td>
+                                                <td align="right"
+                                                    style="border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;">
+                                                    {{data.price}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="5px" style="padding: 0;"></td>
+            </tr>
+
+            <tr style="color: #666; font-size: 12px;">
+                <td width="5px" style="padding: 10px 0;"></td>
+                <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                    <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                                <td width="40%" valign="top" style="padding: 10px 0;">
+                                    <h4 style="margin: 0;">Questions?</h4>
+                                    <p style="color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;">
+                                        Please visit our
+                                        <a href="#" style="color: #666;" target="_blank">
+                                            Support Center
+                                        </a>
+                                        with any questions.
+                                    </p>
+                                </td>
+                                <td width="10%" style="padding: 10px 0;">&nbsp;</td>
+                                <td width="40%" valign="top" style="padding: 10px 0;">
+                                    <h4 style="margin: 0;"><span class="il">Cab</span> Service</h4>
+                                    <p style="color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;">
+                                        <a href="#">535 Mission St., 14th Floor San Francisco, CA 94105</a>
+                                    </p>
+                                </td>
+                                  <td class="aligncenter content-block"><button id="download-button">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="5px" style="padding: 10px 0;"></td>
+              
+            </tr>
+        </tbody>
+         
+    </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const button = document.getElementById('download-button');
+    function generatePDF() {
+        // Choose the element that your content will be rendered to.
+
+        const element = document.getElementById('body');
+
+        // Choose the element and save the PDF for your user.
+        html2pdf().from(element).save();
+    }
+    button.addEventListener('click', generatePDF);
+</script>
