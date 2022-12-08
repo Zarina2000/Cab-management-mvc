@@ -307,9 +307,7 @@ aside {
   .card li:hover:before {
     opacity: 1;
   }
-  .card .hidden-content {
-    border-top: 1px solid #92A1A2;
-  }
+  
   .card .show-more {
     border-top: 1px solid #92A1A2;
     color: #2B3A4F;
@@ -458,27 +456,8 @@ aside {
     color: #2DCC70;
     cursor: pointer;
   }
-  .number-alert {
-    background-color: #E54239;
-    border-radius: 50%;
-    box-sizing: border-box;
-    color: white;
-    display: inline-block;
-    font-family: "Tahoma";
-    font-size: 9px;
-    height: 15px;
-    padding: 3px 0;
-    position: absolute;
-    right: -25%;
-    text-align: center;
-    top: -25%;
-    width: 15px;
-  }
-  body {
-    color: #202020;
-    font-family: "Helvetica", "Open Sans", "Arial";
-    font-size: 0;
-  }
+  
+  
   footer {
     *zoom: 1;
     bottom: 0;

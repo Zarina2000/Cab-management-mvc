@@ -36,6 +36,8 @@ router.get('/delete/:booking_id', ridecontroller.delete);
 router.get('/request', requestcontroller.getRequest);
 
 router.get('/bookinglist', admincontroller.getRequest);
+router.get('/locationDetails', admincontroller.locationDetails);
+router.post('/locationDetails', admincontroller.addLocation);
 
 router.get('/profile', profilecontroller.getProfile);
 

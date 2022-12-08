@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="style.css">
+<style>
+    .container {
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .navbar-nav a {
+        color: white;
+        font-size: 18px;
+    }
+
+    .heading {
+        margin-bottom: 30px;
+    }
+
+    button {
+        background-color: black;
+        color: white!important;
+        height: 40px;
+        margin-left: 120px;
+        border-radius: 10px;
+    }
+</style>
+{{>adminNavbar}}
+<!-- First div -->
+<div class="form-wrap">
+    <div class="row w-100">
+        <div class="col-6 row justify-content-center align-items-center">
+            <div class="bg-white col-11">
+                <form class="container col-9 mx-auto" method="post">
+                    <center>
+                        <h2 class="heading">Add location</h2>
+                    </center>
+                    <input id="myInput" type="text" class="form-control m-3 col-3" name="pickup"
+                        placeholder="Enter pickup location" b>
+                    <input id="myInput1" type="text" class="form-control m-3" name="destination"
+                        placeholder="Enter destination">
+                    <input id="myInput1" type="number" class="form-control m-3" name="amount"
+                        placeholder="Enter amount">
+                    <button type="submit" class="col-5" style="color:white !important">ADD</button>
+                    <span id="err-name" style="color: red;display:block;"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- First div end -->
+
+<script>
+    function validate(e) {
+        e.preventDefault();
+        var pickup = document.getElementById('myInput').value;
+        var destination = document.getElementById('myInput1').value;
+
+        //alert(txt);
+        if (pickup == destination) {
+
+            document.getElementById('err-name').innerText = "Pickup point and destination are same";
+        }
+    }
+
+
+</script>
